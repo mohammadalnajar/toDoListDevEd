@@ -12,12 +12,17 @@ body{
 header{
     font-size: 1.5rem;
 }
+
 header,form{
+    margin: 10px;
     min-height: 20vh;
     display: flex;
     align-items: center;
+    width: 100%;
     justify-content: center;
 }
+
+
 form input, form button{
     border: none;
     padding: 0.5rem;
@@ -34,10 +39,12 @@ form button:hover {
     color: white;
     background-color: #d88771;
 }
+
 .todo-container{
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+    
 }
 .todo-list{
     min-width: 30%;
@@ -81,4 +88,48 @@ form button:hover {
 .fall{
     transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
+}
+@media screen and (max-width:560px){
+    header{
+        font-size: 1rem;
+    }
+    form{
+        
+       display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .todo-input{
+        width: 200px;
+        height: 40px;
+        
+    }
+    .todo-button{
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (max-width:400px){
+    header{
+        font-size: 0.6rem;
+    }
+    form{
+        
+       display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .todo-input{
+        width: 150px;
+        height: 30px;
+        
+    }
+    .todo-button{
+        height: 30px;
+    }
 }
