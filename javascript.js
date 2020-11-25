@@ -14,7 +14,7 @@ function addTodo(event){
     //prevent form from submitting
     event.preventDefault(event);
     // //todoDIV
-    
+    if (todoInput.value.length > 0){
     const todoDiv=document.createElement("div");
     todoDiv.classList.add("todo");
     //todoITEM
@@ -45,7 +45,7 @@ function addTodo(event){
     //     items[i].classList.toggle("completed");
     //     }
     // }
-    
+    }
 }
 
 function deleteCheck(e){
