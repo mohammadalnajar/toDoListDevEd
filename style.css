@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(120deg, #e2c35d, #d88771);
+    background-image: linear-gradient(to right,rgb(226, 80, 82), rgb(167, 90, 196));
     color: white;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
 }
+.alles{
+    display: grid;
+}
 header{
     font-size: 1.5rem;
+    letter-spacing: 5px;
 }
 
 header,form{
@@ -21,23 +25,57 @@ header,form{
     width: 100%;
     justify-content: center;
 }
-
+form{
+    max-width: 500px;
+    justify-self: center;
+    
+}
 
 form input, form button{
     border: none;
     padding: 0.5rem;
     font-size: 2rem;
-    background-color: white;
+    background-color:rgba(0, 0, 0, 0.212);
+    transition: all 0.3s ease;
+
 }
 form button{
     color:#d88771 ;
-    background-color: white;
-    transition: all 0.3s ease;
+    /* background-color: white; */
+    /* transition: all 0.3s ease; */
     cursor: pointer;
+    flex-grow: 1;
+    display: flex;
+    height: 40%;
+    border-radius: 0px 10px 20px 0px;
+}
+.todo-button{
+    display: flex;  
+    justify-content: center;
+}
+.fas{
+    justify-self: center;
+    align-self: center;
+}
+form input{
+    height: 40%;
+    flex:3;
+    border-radius: 20px 0px 0px 10px;
+    /* transition: all 0.3s ease; */
+    padding: 20px;
+
+}
+form input:focus {
+    outline: none;
 }
 form button:hover {
     color: white;
-    background-color: #d88771;
+    background-color:rgba(255, 111, 71, 0.719);
+    
+}
+form button:focus {
+    border: none;
+    outline: none;
 }
 
 .todo-container{
@@ -58,28 +96,51 @@ form button:hover {
     background-color: white;
     color: black;
     transition: all 0.3s ease;
+    background-color:rgba(0, 0, 0, 0.212);
+    border-radius: 5px 0px 0px 10px;
     
 }
 .todo li{
     flex: 1;
-    padding: 5px;
+    padding: 10px;
     align-self: center;
+    
     
 }
 .complete-btn, .trash-btn{
-    background-color: #ff6f47;
+    background-color: rgba(255, 111, 71, 0.589);
     padding: 1rem;
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    transition: all .3s ease;
 }
 .complete-btn{
-    background-color: rgb(72, 197, 72);
+    background-color: rgba(72, 197, 72,.5);
 
+}
+.trash-btn:hover{
+    background-color:  rgb(255, 111, 71);
+}
+.trash-btn:hover .fa-trash{
+    color: white;
+}
+.complete-btn:hover{
+    background-color: rgba(72, 197, 72, 0.979);
+}
+
+.complete-btn:focus{
+    border: none;
+    list-style: none;
+    outline: none;
+}
+.trash-btn:focus{
+    outline: none;
 }
 
 .fa-trash,.fa-check{
     pointer-events: none;
+    transition: all .2s ease;
 }
 .completed{
     text-decoration: line-through;
@@ -89,14 +150,15 @@ form button:hover {
     transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
 }
-@media screen and (max-width:560px){
+
+@media screen and (max-width:660px){
     header{
         font-size: 1rem;
     }
     form{
-        
+        font-size: 1rem;
        display: flex;
-        width: 100vw;
+        max-width: 300px;
         align-items: center;
         justify-content: center;
         
@@ -112,12 +174,12 @@ form button:hover {
         align-items: center;
     }
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:480px){
     header{
         font-size: 0.6rem;
     }
     form{
-        
+        font-size: 0.6rem;
        display: flex;
         width: 100vw;
         align-items: center;
@@ -125,11 +187,12 @@ form button:hover {
         
     }
     .todo-input{
+        font-size: 0.8rem;
         width: 150px;
-        height: 30px;
+        /* height: 30px; */
         
     }
-    .todo-button{
+    /* .todo-button{
         height: 30px;
-    }
+    } */
 }
