@@ -11,6 +11,8 @@ body{
 }
 .alles{
     display: grid;
+    justify-content: center;
+    align-items:center;
 }
 header{
     font-size: 1.5rem;
