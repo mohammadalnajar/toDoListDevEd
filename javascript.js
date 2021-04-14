@@ -1,8 +1,16 @@
+var _ = require('lodash');
+var array=[1,2,3,4,5,6];
+
+
+console.log('answer', _.slice(array,[1],[4]));
+
 //Selectors
 const todoInput=document.querySelector('.todo-input');
 const todoButton=document.querySelector('.todo-button');
 const todoList=document.querySelector('.todo-list');
-
+const items=document.querySelectorAll('.item');
+const items2=_.slice(items,[1],[3]);
+console.log(items2, items);
 //Events
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
